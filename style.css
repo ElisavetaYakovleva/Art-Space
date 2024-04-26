@@ -1,3 +1,8 @@
+body{
+    font-family: 'Comfortaa', sans-serif;
+    display: flex;
+    flex-direction: column;
+}
 .hlogo{ /**/
     height: 100px;
 }
@@ -5,7 +10,6 @@ header{
     display: flex; /*flex контейнер*/
     justify-content: space-between; /*выравнивание по горизонтали*/
     align-items: center; /*выравнивание по вертикали*/
-    font-family: 'Comfortaa', sans-serif;
 }
 button{
     font-family: 'Comfortaa', sans-serif;
@@ -13,14 +17,18 @@ button{
     font-size: 20px;
      
 }
-header button{
+button{
     color: #fff;
-    background-color: #23a030;
+    background-color: #ea9022;
     border: none;
     border-radius: 15px;
     cursor: pointer;
     padding: 15px;
-    box-shadow: 0 16px 30px rgb(52 213 68 / 22%); /*отступ тени по гор, по вертикали и размытость*/
+    transition: background-color 0.8s ease;
+    box-shadow: 0 16px 30px rgba(199, 52, 22, 0.22); /*отступ тени по гор, по вертикали и размытость*/
+}
+button:hover{
+    background-color: #bfd30d;
 }
 div a{
     margin-right: 10px;
@@ -28,6 +36,70 @@ div a{
     color: #000;
     font-weight: 500;
 }
-.hcontrols{
-    
+.buyCertificat{
+    margin-top: 10px;
+    display: flex;
+    height: 40px;
+    justify-content:center;
+    align-items: center;
+    background-color: #f56b08;
+}
+.textBuy{
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bolder;
+    color: #fff;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    height: 800px; /*vh - высота экрана*/
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+.about img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(40%);
+}
+.about h1{
+    font-size: 60px;
+}
+.about p{
+    max-width: 70%;
+    font-size: 25px;
+    margin-bottom: 40px;
+    line-height: 35px;
+}
+.ours{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 40px;
+}
+.gallery{
+    padding: 5px;
+    display: grid;
+    height: 600px;
+    justify-content: center;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 15px;
+}
+.gallery img{
+    border-radius: 20px;
+    object-fit: cover;
+    transition: filter 1s ease; /*скорость перехода в режиме ease*/
+    max-width: 100%;
+    height: 100%;
+}
+.gallery img:hover{
+    filter: brightness(85%);
 }
